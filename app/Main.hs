@@ -1,7 +1,7 @@
-module Main where
+module Piet where
 
+x :: IO()
+x = putStrLn "33"
+ 
 main :: IO()
-main = putScr "Wat een gekloot zeg"
-
-bah :: IO()
-bah = putScr "Extra regel"
+main = putStrLn "Dag wereld"
