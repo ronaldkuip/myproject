@@ -11,6 +11,8 @@ x = putStrLn "33"
 [2,3,4]
 
 -}
+
+-- Nu oveg ik beneden iets toe. Ik verwacht dat mijn client daarvan op de hoogte wordt gesteld.
 triple :: [Int] 
 triple = [3,4]
 
