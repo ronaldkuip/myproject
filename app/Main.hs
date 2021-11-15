@@ -11,6 +11,9 @@ x = putStrLn "33"
 [2,3,4]
 
 -}
+
+-- jammer dat de haskell language server het niet doet op de mac
+
 triple :: [Int] 
 triple = [3,4]
 
