@@ -4,4 +4,4 @@ x :: IO()
 x = putStrLn "33"
  
 main :: IO()
-main = putStrLn "Dag wereld"
+main = putStrLn "Dag wereld op zolder"
