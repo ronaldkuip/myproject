@@ -12,8 +12,7 @@ x = putStrLn "33"
 
 -}
 
--- jammer dat de haskell language server het niet doet op de mac
-
+-- Nu oveg ik beneden iets toe. Ik verwacht dat mijn client daarvan op de hoogte wordt gesteld.
 triple :: [Int] 
 triple = [3,4]
 
