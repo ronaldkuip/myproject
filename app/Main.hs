@@ -19,7 +19,7 @@ triple = [3,4]
 dtriple :: [Int] 
 dtriple = [2, 3,4]
 
--- opnieuw ietes toeveogen
+-- opnieuw ietes toeveogen - en weer een update van beneden
 
 
 main :: IO()
