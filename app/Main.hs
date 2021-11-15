@@ -19,5 +19,8 @@ triple = [3,4]
 dtriple :: [Int] 
 dtriple = [2, 3,4]
 
+-- opnieuw ietes toeveogen
+
+
 main :: IO()
 main = putStrLn "Dag wereld op zolder"
