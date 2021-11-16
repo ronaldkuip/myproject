@@ -17,9 +17,10 @@ data Card = Card { suit  :: Suit,
 
 instance Ord Card where
       compare c1 c2 = compare (rank c1, suit c1) (rank c2, suit c2)
-
+ 
 instance Enum Card where
-      toEnum   n  = let (suit,rank) = n `divMod` 13 in Card (toEnum suit) (toEnum rank)
+      -- toEnum   n  = let (suit,rank) = n `divMod` 13 in Card (toEnum suit) (toEnum rank)
+      toEnum   n  = Card (toEnum ( n `div` 13 ) ) ( toEnum ( n `mod` 13 ) )
       fromEnum c  = fromEnum (suit c) * 13 + fromEnum (rank c)
 
 type Deck = [Card]
