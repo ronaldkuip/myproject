@@ -41,5 +41,7 @@ tricks = [ [ n,e,s,w ] | n <-  north, e <- east, s <- south, w <- west ]
 -}
 
 jj :: [Card] -> Card
+
+-- testing github
 jj x = if (!!) x 0 == Card Club Four then Card Club Two else Card Club Three
 
