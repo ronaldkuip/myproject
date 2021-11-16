@@ -19,7 +19,6 @@ instance Ord Card where
       compare c1 c2 = compare (rank c1, suit c1) (rank c2, suit c2)
  
 instance Enum Card where
-      -- toEnum   n  = let (suit,rank) = n `divMod` 13 in Card (toEnum suit) (toEnum rank)
       toEnum   n  = Card (toEnum ( n `div` 13 ) ) ( toEnum ( n `mod` 13 ) )
       fromEnum c  = fromEnum (suit c) * 13 + fromEnum (rank c)
 
@@ -27,3 +26,12 @@ type Deck = [Card]
 
 deck::Deck
 deck = [Card suit rank | suit <- [Club .. Spade], rank <- [Two .. Ace] ]
+
+north = [ Card Club Ace  , Card Club King , Card Club Six  , Card Club Three ]
+east  = [ Card Club Nine , Card Club Two ]
+south = [ Card Club Jack , Card Club Ten  , Card Club Eight, Card Club Five ]
+west  = [ Card Club Queen, Card Club Seven, Card Club Four ]
+
+matrix = [ south, west, north, east ]
+
+tricks = [ [ n,e,s,w ] | n <-  north, e <- east, s <- south, w <- west ]
