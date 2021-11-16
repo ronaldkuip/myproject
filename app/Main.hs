@@ -35,3 +35,11 @@ west  = [ Card Club Queen, Card Club Seven, Card Club Four ]
 matrix = [ south, west, north, east ]
 
 tricks = [ [ n,e,s,w ] | n <-  north, e <- east, s <- south, w <- west ]
+{- 
+>>> head $ tail $ tail tricks
+[Card {suit = Club, rank = Ace},Card {suit = Club, rank = Nine},Card {suit = Club, rank = Jack},Card {suit = Club, rank = Four}]
+-}
+
+jj :: [Card] -> Card
+jj x = if (!!) x 0 == Card Club Four then Card Club Two else Card Club Three
+
