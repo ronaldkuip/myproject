@@ -40,8 +40,6 @@ tricks = [ [ n,e,s,w ] | n <-  north, e <- east, s <- south, w <- west ]
 [Card {suit = Club, rank = Ace},Card {suit = Club, rank = Nine},Card {suit = Club, rank = Jack},Card {suit = Club, rank = Four}]
 -}
 
-jj :: [Card] -> Card
-
--- testing github
-jj x = if (!!) x 0 == Card Club Four then Card Club Two else Card Club Three
+hoogsteKaart :: [Card] -> Int -> Card
+hoogsteKaart slag speelrichting = if  (!!) x speelrichting > (!!) x (speelrichting+2) then (!!) x speelrichting  else (!!) x (speelrichting+2)
 
